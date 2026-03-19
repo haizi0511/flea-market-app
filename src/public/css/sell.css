@@ -1,0 +1,180 @@
+/* 全体 */
+.sell {
+  padding: 30px 15px;
+}
+
+.sell__inner {
+  width: 680px;
+  margin: 0 auto;
+}
+
+.sell__title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+/* セクション */
+.sell-section {
+  margin-top: 18px;
+}
+
+.sell-section__label {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.sell-section__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 24px 0 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+/* フィールド */
+.field {
+  margin-top: 14px;
+}
+
+.field__label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* 入力系 */
+.input,
+.select select,
+.textarea {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.textarea {
+  resize: none;
+  min-height: 110px;
+}
+
+/* select 右の▼をそれっぽく */
+.select {
+  position: relative;
+}
+
+.select select {
+  appearance: none;
+}
+
+.select::after {
+  content: "▼";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #666;
+  pointer-events: none;
+}
+
+/* 画像 */
+.image-box {
+  border: 1px dashed #cfcfcf;
+  height: 170px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-box__input {
+  display: none;
+}
+
+.image-box__label {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid #ff5555;
+  border-radius: 4px;
+  color: #ff5555;
+  font-weight: 700;
+  cursor: pointer;
+  background: #fff;
+}
+
+/* カテゴリータグ */
+.category-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-tag__input {
+  display: none;
+}
+
+.category-tag__text {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid #ff5555;
+  border-radius: 20px;
+  color: #ff5555;
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.category-tag__input:checked + .category-tag__text {
+  background: #ff5555;
+  color: #fff;
+}
+
+/* 価格 */
+.price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price__yen {
+  font-weight: 700;
+}
+
+.input--price {
+  flex: 1;
+}
+
+/* エラー */
+.error {
+  margin-top: 6px;
+  color: #ff0000;
+  font-size: 12px;
+  text-align: left;
+}
+
+/* ボタン */
+.submit {
+  margin-top: 26px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 3px;
+  background: #ff5555;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* タブレット想定 */
+@media (max-width: 850px) {
+  .sell__inner {
+    width: 90%;
+  }
+}

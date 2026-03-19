@@ -1,0 +1,82 @@
+/* .header-nav__button {
+    padding: 6px 14px;
+    border: 1px solid #a49b93;
+    border-radius: 3px;
+    background: #f3f3f3;
+    color: #a49b93;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.header-nav__button:hover {
+    background: #a49b93;
+    color: #fff;
+} */
+
+.header {
+  background: #000;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px 100px;
+  height: 80px;
+}
+
+.header__logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header__search-box{
+  font-size: 20px;
+  width: 600px;
+  padding: 10px 18px;
+  border-radius: 6px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.header-nav__button {
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px 18px;
+  border-radius: 6px;
+}
+
+.header__mypage-button {
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px 18px;
+  border-radius: 6px;
+}
+
+.header__sell-button{
+  border: none;
+  background: transparent;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px 18px;
+  border-radius: 6px;
+}

@@ -24,3 +24,6 @@ Dockerビルド<br>
 ・Laravel 8.83.29<br>
 ・MySQL 8.0.26<br>
 ・nginx 1.21.1<br>
+
+##　ER図
+![ER図](docs/er.png)
