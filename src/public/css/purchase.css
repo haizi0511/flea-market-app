@@ -86,3 +86,9 @@
 .btn-buy:hover {
   opacity: 0.9;
 }
+
+@media (max-width: 850px) {
+  .purchase {
+    width: 90%;
+  }
+}

@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Purchase;
 use App\Models\Item;
 use App\Models\PaymentMethod;
 use App\Models\User;
+use App\Http\Requests\PurchaseRequest;
+use App\Http\Requests\AddressRequest;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -23,20 +24,17 @@ class PurchaseController extends Controller
         return view('purchase', compact('item', 'paymentMethods','user'));
     }
 
-    public function store(Request $request, $item_id)
+    public function store(PurchaseRequest $request, $item_id)
     {
         $user = Auth::user()->load('profile');
 
-        // セッションから仮住所取得
         $shipping = session('shipping');
 
-        // セッションがあればそれを使う
         if ($shipping) {
             $postal_code = $shipping['postal_code'];
             $address = $shipping['address'];
             $building = $shipping['building'];
         } else {
-            // なければprofile
             $postal_code = optional($user->profile)->postal_code;
             $address = optional($user->profile)->address;
             $building = optional($user->profile)->building;
@@ -45,13 +43,12 @@ class PurchaseController extends Controller
         Purchase::create([
             'user_id' => $user->id,
             'item_id' => $item_id,
-            'payment_methods_id' => $request->payment_method_id,
+            'payment_methods_id' => $request->payment_methods_id,
             'postal_code' => $postal_code,
             'address' => $address,
             'building' => $building,
         ]);
 
-        // 仮住所は消す
         session()->forget('shipping');
 
         return redirect('/')
@@ -66,7 +63,7 @@ class PurchaseController extends Controller
         return view('address', compact('user', 'item_id'));
     }
 
-    public function update(Request $request, $item_id)
+    public function update(AddressRequest $request, $item_id)
     {
         session([
             'shipping' => [

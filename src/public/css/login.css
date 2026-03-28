@@ -1,7 +1,7 @@
 .login-form__content {
   margin: 0 auto;
-  padding: 30px 15px;
-  max-width: 1230px;
+  padding: 10px ;
+  width: 80%;
 }
 
 .login-form__heading {
@@ -33,7 +33,6 @@
 .form__input--text input {
   padding: 10px;
   width: 100%;
-  height: 40px;
   border: 1px solid #ddd;
   border-radius: 3px;
 
@@ -58,25 +57,5 @@
 .register__link {
   margin-top: 20px;
   text-align: center;
-}
-
-@media (min-width: 1400px) and (max-width: 1540px) {
-
-  .container {
-    width: 1200px;
-  }
-
-}
-
-@media (min-width: 768px) and (max-width: 850px) {
-
-  .container {
-    width: 90%;
-  }
-
-  .card {
-    display: block;
-  }
-
 }
 

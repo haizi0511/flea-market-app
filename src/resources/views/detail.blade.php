@@ -11,15 +11,12 @@
 
 @section('content')
 <div class="detail">
-
-  {{-- 左：画像 --}}
   <div class="detail__left">
     <div class="detail__image">
       <img src="{{ $item->item_image ?? '/img/noimage.png' }}" alt="商品画像">
     </div>
   </div>
 
-  {{-- 右：情報 --}}
   <div class="detail__right">
 
     <h1 class="detail__title">
@@ -35,32 +32,37 @@
     </div>
 
     <div class="detail__meta">
-      <form method="post" action="/item/{{ $item->id }}/like" class="detail__meta-mylist">
-          @csrf
+      <div class="meta-item">
+        <form method="post" action="/item/{{ $item->id }}/like" class="detail__meta-mylist">
+            @csrf
 
-          @if($isInMylist)
-            @method('DELETE')
-          @endif
+            @if($isInMylist)
+              @method('DELETE')
+            @endif
 
-        <button type="submit" class="like-button">
-          @if($isInMylist)
-            <img src="{{ asset('img/ハートロゴ_ピンク.png') }}" alt="♥" >
-          @else
-            <img src="{{ asset('img/ハートロゴ_デフォルト.png') }}" alt="♡" >
-          @endif
-        </button>
-      </form>
+          <button type="submit" class="like-button">
+            @if($isInMylist)
+              <img src="{{ asset('img/ハートロゴ_ピンク.png') }}" alt="♥" >
+            @else
+              <img src="{{ asset('img/ハートロゴ_デフォルト.png') }}" alt="♡" >
+            @endif
+          </button>
+        </form>
 
-      <span class="like-count">
-        {{ $item->mylists->count() }}
-      </span>
+        <span class="like-count">
+          {{ $item->mylists->count() }}
+        </span>
+      </div>
 
-      <div class="detail__meta-comment">
-          <img src="{{ asset('img/ふきだしロゴ.png') }}" alt="💬">
-      <span class="comment-count">
-        {{ $item->comments->count() }}
-      </span>
+      <div class="meta-item">
+        <div class="detail__meta-comment">
+            <img src="{{ asset('img/ふきだしロゴ.png') }}" alt="💬">
 
+        <span class="comment-count">
+          {{ $item->comments->count() }}
+        </span>
+
+        </div>
       </div>
     </div>
 
@@ -116,9 +118,11 @@
       @csrf
       <h2 class="sec">商品へのコメント</h2>
       <textarea name="comment">{{ old('comment') }}</textarea>
+      <div class="comment__error">
         @error('comment')
           <p>{{ $message }}</p>
         @enderror
+      </div>
       <button class="btn-buy">コメントを送信する</button>
     </form>
     @endauth

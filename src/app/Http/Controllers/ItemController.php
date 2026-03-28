@@ -2,27 +2,36 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Item;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Category;
 use App\Models\Condition;
+use App\Http\Requests\ExhibitionRequest;
+use Illuminate\Http\Request;
 
 class ItemController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $keyword = $request->keyword;
+
         $query = Item::with('purchase');
 
-    if (Auth::check()) {
-        $query->where('user_id', '!=', Auth::id());
-    }
+        if (Auth::check()) {
+            $query->where('user_id', '!=', Auth::id());
+        }
 
-    $items = $query->get();
+        if (!empty($keyword)) {
+            $query->where('item_name', 'like', '%' . $keyword . '%');
+        }
 
-    $tab = 'recommend';
+        $items = $query->get();
 
-    return view('index', compact('items','tab'));
+        return view('index', [
+            'items' => $items,
+            'keyword' => $keyword,
+            'tab' => 'recommend',
+        ]);
     }
 
     public function search(Request $request)
@@ -33,7 +42,11 @@ class ItemController extends Controller
             ->with('purchase')
             ->get();
 
-        return view('index', compact('items'));
+        return view('index',[
+            'items' => $items,
+            'keyword' => $keyword,
+            'tab' => 'recommend',
+            ]);
     }
 
     public function detail($item_id)
@@ -63,7 +76,7 @@ class ItemController extends Controller
         return view('sell', compact('categories'));
     }
 
-    public function store(Request $request)
+    public function store(ExhibitionRequest $request)
     {
         $user = auth()->user();
         $path = $request->file('item_image')->store('items', 'public');
@@ -82,11 +95,3 @@ class ItemController extends Controller
             return redirect('/');
     }
 }
-    // ストアのバリデーション
-    // $request->validate([
-    //     'item_image' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
-    //     'condition_id' => ['required'],
-    //     'item_name' => ['required'],
-    //     'item_detail' => ['required'],
-    //     'price' => ['required'],
-    // ]);

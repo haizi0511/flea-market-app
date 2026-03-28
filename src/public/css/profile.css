@@ -1,7 +1,7 @@
 .login-form__content {
   margin: 0 auto;
   padding: 30px 15px;
-  max-width: 1230px;
+  max-width: 100%;
 }
 
 .login-form__heading {
@@ -9,22 +9,18 @@
   text-align: center;
 }
 
-/* 見出し中央 */
 .profile-form__heading {
   text-align: center;
   margin-bottom: 40px;
 }
 
-/* 画像エリア全体 */
 .profile-form__image-area {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 40px;
   margin-bottom: 40px;
 }
 
-/* 丸い画像 */
 .profile-form__image img {
   width: 120px;
   height: 120px;
@@ -34,12 +30,11 @@
   background-color: #dddddd;
 }
 
-/* ボタン風 */
 .image-upload-label {
   display: inline-block;
   padding: 8px 16px;
-  border: 1px solid #ff5a5a;
-  color: #916b6b;
+  border: 1px solid #ff5a5f;
+  color: #ff5a5f;
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
@@ -47,14 +42,20 @@
 }
 
 .image-upload-label:hover {
-  background-color: #ff5a5a;
+  background-color: #ff5a5f;
   color: #fff;
 }
 
 .form {
   margin: 0 auto;
-  width: 40%;
+  width: 30%;
   text-align: center;
+}
+
+@media (max-width: 850px) {
+  .form {
+    width: 70%;
+  }
 }
 
 .form__group {
@@ -92,7 +93,7 @@
   height: 50px;
   border: none;
   border-radius: 3px;
-  background: #ff5555;
+  background: #ff5a5f;
   color: #fff;
   cursor: pointer;
 }
@@ -101,24 +102,3 @@
   margin-top: 20px;
   text-align: center;
 }
-
-@media (min-width: 1400px) and (max-width: 1540px) {
-
-  .container {
-    width: 1200px;
-  }
-
-}
-
-@media (min-width: 768px) and (max-width: 850px) {
-
-  .container {
-    width: 90%;
-  }
-
-  .card {
-    display: block;
-  }
-
-}
-

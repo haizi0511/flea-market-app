@@ -10,7 +10,6 @@ class Item extends Model
     use HasFactory;
     protected $fillable = [
         'item_image',
-        'category_id',
         'condition',
         'item_name',
         'brand_name',
@@ -25,9 +24,9 @@ class Item extends Model
     }
 
     public function categories()
-{
-    return $this->belongsToMany(Category::class);
-}
+    {
+        return $this->belongsToMany(Category::class);
+    }
 
     public function purchase()
     {
@@ -42,11 +41,6 @@ class Item extends Model
     public function mylists()
     {
         return $this->hasMany(Mylist::class);
-    }
-
-    public function profiles()
-    {
-        return $this->hasMany(Profile::class);
     }
 
     public function scopeKeywordSearch($query, $keyword)

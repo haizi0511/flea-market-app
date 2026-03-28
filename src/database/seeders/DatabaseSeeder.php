@@ -15,7 +15,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             CategoriesTableSeeder::class,
-            ConditionsTableSeeder::class,
             PaymentMethodsTableSeeder::class,
             ]);
         // \App\Models\User::factory(10)->create();

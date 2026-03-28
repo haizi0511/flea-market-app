@@ -30,4 +30,3 @@ class DropConditionsTable extends Migration
         });
     }
 }
-

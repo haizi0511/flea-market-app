@@ -10,12 +10,12 @@
 
 @section('content')
 <div class="items__tabs">
-  <a href="/" class="{{ $tab === 'recommend' ? 'active' : '' }}">
-    おすすめ
+  <a href="/?keyword={{ request('keyword') }}" class="items__tab {{ $tab === 'recommend' ? 'is-active' : '' }}">
+      おすすめ
   </a>
 
-  <a href="/mylist" class="{{ $tab === 'mylist' ? 'active' : '' }}">
-    マイリスト
+  <a href="/mylist?keyword={{ request('keyword') }}" class="items__tab {{ $tab === 'mylist' ? 'is-active' : '' }}">
+      マイリスト
   </a>
 </div>
 

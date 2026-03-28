@@ -15,26 +15,26 @@ class ItemsTableSeeder extends Seeder
     public function run()
     {
     $param = [
-      'item_image' => 'test',
-      'category_id' => 1,
-      'condition_id' => 1,
-      'item_name' => 'test',
-      'brand_name' => 'test',
-      'item_detail' => 'test',
-      'price' => '10',
-      'user_id' => 1,
+      [
+        'item_image' => 'test1',
+        'condition' => '状態が悪い',
+        'item_name' => 'test1',
+        'brand_name' => 'test1',
+        'item_detail' => 'テストです',
+        'price' => '1000',
+        'user_id' => 1,
+      ],
+      [
+        'item_image' => 'test2',
+        'condition' => '良好',
+        'item_name' => 'test2',
+        'brand_name' => 'test2',
+        'item_detail' => 'テストです',
+        'price' => '2000',
+        'user_id' => 1,
+      ]
     ];
-    DB::table('items')->insert($param);
-    $param = [
-      'item_image' => 'test',
-      'category_id' => 1,
-      'condition_id' => 1,
-      'item_name' => 'test',
-      'brand_name' => 'test',
-      'item_detail' => 'test',
-      'price' => '10',
-      'user_id' => 1,
-    ];
+
     DB::table('items')->insert($param);
     }
 }

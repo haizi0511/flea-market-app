@@ -57,7 +57,7 @@
         </div>
 
         <div class="field">
-          <label class="field__label" for="condition_id">商品の状態</label>
+          <label class="field__label" for="condition">商品の状態</label>
           <div class="select">
             <select name="condition">
               <option value="">選択してください</option>
@@ -70,7 +70,7 @@
             </select>
           </div>
 
-          @error('condition_id')
+          @error('condition')
             <p class="error">{{ $message }}</p>
           @enderror
         </div>

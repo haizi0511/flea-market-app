@@ -1,7 +1,7 @@
 .register-form__content {
     margin: 0 auto;
     padding: 30px 15px;
-    max-width: 1230px;
+    max-width: 100%;
 }
 
 .register-form__heading {
@@ -11,11 +11,17 @@
 
 .form {
     margin: 0 auto;
-    width: 70%;
+    width: 40%;
     text-align: center;
     background: #fff;
     padding: 40px 30px;
     border-radius: 5px;
+}
+
+@media (max-width: 850px) {
+  .form {
+    width: 70%;
+  }
 }
 
 .form__group {

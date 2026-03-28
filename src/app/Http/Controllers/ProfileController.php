@@ -7,6 +7,8 @@ use App\Models\Profile;
 use App\Models\User;
 use App\Models\Item;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\ProfileRequest;
+
 
 class ProfileController extends Controller
 {
@@ -17,7 +19,8 @@ class ProfileController extends Controller
         $tab = $request->query('tab', 'sell');
 
         if ($tab === 'buy') {
-            $items = $user->purchases()->with('item')->get();
+            $purchases = $user->purchases()->with('item')->get();
+            $items = $purchases->pluck('item');
         }
         else {
             $items = $user->items()->get();
@@ -33,12 +36,13 @@ class ProfileController extends Controller
         return view('profile', compact('user','profile'));
     }
 
-    public function store(Request $request)
+    public function store(ProfileRequest $request)
     {
         $user = auth()->user();
 
         $user->update([
             'name' => $request->name,
+            'profile_completed' => 1,
         ]);
 
         $user->profile()->create([
@@ -51,7 +55,7 @@ class ProfileController extends Controller
         return redirect('/');
     }
 
-        public function update(Request $request)
+        public function update(ProfileRequest $request)
     {
         $user = auth()->user();
 

@@ -1,6 +1,6 @@
-      <form class="header__search" action="/item/search" method="post">
+      <form class="header__search" action="{{ url()->current() }}" method="get">
               @csrf
-        <input class=header__search-box type="text" name="keyword" placeholder="なにをお探しですか？">
+        <input class=header__search-box type="text" name="keyword" value="{{ request('keyword') }}" placeholder="なにをお探しですか？">
       </form>
       <ul  class="header-nav">
         <li class="header-nav__item">

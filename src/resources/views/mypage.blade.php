@@ -10,7 +10,6 @@
 
 @section('content')
 
-{{-- プロフィールエリア --}}
 <div class="profile">
 
   <div class="profile__image">
@@ -28,11 +27,14 @@
 </div>
 
 <div class="mypage">
-  {{-- タブ --}}
   <div class="mypage__tabs">
-    <a href="/mypage?tab=sell" class="mypage__tab {{ $tab === 'sell' ? 'tab--active' : '' }}">出品した商品</a>
+    <a href="/mypage?tab=sell" class="mypage__tab {{ $tab === 'sell' ? 'is-active' : '' }}">
+      出品した商品
+    </a>
 
-    <a href="/mypage?tab=buy" class="mypage__tab {{ $tab === 'buy' ? 'tab--active' : '' }}">購入した商品</a>
+    <a href="/mypage?tab=buy" class="mypage__tab {{ $tab === 'buy' ? 'is-active' : '' }}">
+      購入した商品
+    </a>
   </div>
 
     {{-- 商品一覧 --}}

@@ -28,5 +28,5 @@ Route::middleware('auth')->group(function () {
     Route::post('/item/{item_id}/comments', [CommentController::class, 'store']);
 });
 
-Route::post('/item/search', [ItemController::class, 'search']);
+Route::get('/item/search', [ItemController::class, 'search']);
 Route::get('/item/{item_id}', [ItemController::class, 'detail']);
