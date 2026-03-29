@@ -28,7 +28,7 @@
 
       <div class="purchase__item">
         <div class="purchase__image">
-          <img src="{{ asset('storage/' . $item->item_image) }}" alt="商品画像">
+          <img src="{{ $item->item_image }}" alt="商品画像">
         </div>
 
         <div class="purchase__info">

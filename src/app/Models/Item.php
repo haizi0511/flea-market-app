@@ -48,7 +48,7 @@ class Item extends Model
     if (!empty($keyword)) {
         $query->where('item_name', 'like', '%' . $keyword . '%');
     }
-     return $query;
+        return $query;
     }
 
     const CONDITIONS = [

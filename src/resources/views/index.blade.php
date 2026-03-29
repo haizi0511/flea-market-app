@@ -19,14 +19,12 @@
   </a>
 </div>
 
-{{-- 商品グリッド --}}
 <div class="items__grid">
   @foreach ($items as $item)
 
-  {{-- カード1 --}}
       <a href="/item/{{ $item->id }}" class="item-card">
         <div class="item-card__image">
-          <img src="{{ asset('storage/' . $item->item_image) }}" alt="商品画像">
+          <img src="{{ $item->item_image }}" alt="商品画像">
 
           @if($item->purchase)
             <span class="item-card__sold">sold</span>

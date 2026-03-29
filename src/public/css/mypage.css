@@ -1,103 +1,101 @@
 .profile {
-  display: flex;
-  align-items: center;
-  max-width: 60%;
-  gap: 40px;
-  padding: 40px 0;
-  margin: 0 auto;
+    display: flex;
+    align-items: center;
+    max-width: 60%;
+    gap: 40px;
+    padding: 40px 0;
+    margin: 0 auto;
 }
 
 @media (max-width: 850px) {
-  .profile {
-    width: 90%;
-  }
+    .profile {
+        width: 90%;
+    }
 }
 
 .profile__image {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
 .profile__image img {
-  width: 100%;
-  height: 100%;
-  background: #ddd;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    background: #ddd;
+    object-fit: cover;
+    display: block;
 }
 
 
 .profile__name {
-  font-size: 24px;
-  font-weight: bold;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .profile__edit {
-  margin-left: auto;
-  border: 1px solid red;
-  padding: 10px 20px;
-  border-radius: 6px;
-  color: red;
-  text-decoration: none;
+    margin-left: auto;
+    border: 1px solid red;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: red;
+    text-decoration: none;
 }
 
 .mypage{
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 30px 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
 }
 
 .mypage__tabs {
-  display: flex;
-  gap: 40px;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 30px;
-  padding: 0px 40px ;
+    display: flex;
+    gap: 40px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+    padding: 0px 40px ;
 }
 
 .mypage__tab {
-  padding: 10px 100px;
-  text-decoration: none;
-  color: #777;
-  font-weight: bold;
+    padding: 10px 100px;
+    text-decoration: none;
+    color: #777;
+    font-weight: bold;
 }
 
 .mypage__tab.is-active {
-  text-decoration: none;
-  color: red;
-  border-bottom: 2px solid red;
+    text-decoration: none;
+    color: red;
+    border-bottom: 2px solid red;
 }
 
 .items__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 90%;
-  margin: 0 auto;
-  justify-items: start;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    justify-items: start;
 }
 
 .item-card {
-  width: 80%;
-  position: relative;
+    width: 80%;
+    position: relative;
 }
 
 .item-card__image {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background: #ddd;
-  border-radius: 8px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 18px;
-  color: #555;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #555;
 }
 
 .item-card__name {
-  margin-top: 10px;
+    margin-top: 10px;
 }

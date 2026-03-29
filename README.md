@@ -13,6 +13,7 @@ Dockerビルド<br>
 ・php artisan key:generate<br>
 ・php artisan migrate<br>
 ・php artisan db:seed<br>
+・phpMyAdmin：http://localhost:8080/<br>
 
 ### 開発環境
 ・商品一覧画面（トップ画面）：http://localhost/<br>
@@ -26,4 +27,4 @@ Dockerビルド<br>
 ・nginx 1.21.1<br>
 
 ##　ER図
-![ER図](docs/er.png)
+![ER図](\\wsl.localhost\Ubuntu\home\midori\coachtech\laravel\flea-market-app\ER図.drawio)

@@ -1,20 +1,3 @@
-/* .header-nav__button {
-    padding: 6px 14px;
-    border: 1px solid #a49b93;
-    border-radius: 3px;
-    background: #f3f3f3;
-    color: #a49b93;
-    cursor: pointer;
-    font-size: 14px;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.header-nav__button:hover {
-    background: #a49b93;
-    color: #fff;
-} */
-
 .header {
     background: #000;
     margin: 0 auto;

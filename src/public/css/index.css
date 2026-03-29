@@ -1,80 +1,77 @@
 .items {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 30px 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
 }
 
 
 .items__tabs {
-  display: flex;
-  gap: 40px;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 30px;
-  padding: 0px 40px ;
+    display: flex;
+    gap: 40px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+    padding: 0px 40px ;
 }
 
 .items__tab {
-  padding: 10px 100px;
-  text-decoration: none;
-  color: #777;
-  font-weight: bold;
+    padding: 10px 100px;
+    text-decoration: none;
+    color: #777;
+    font-weight: bold;
 }
 
 .items__tab.is-active {
-  text-decoration: none;
-  color: red;
-  font-weight: bold;
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
 }
 
 .items__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 90%;
-  margin: 0 auto;
-  justify-items: start;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    justify-items: start;
 }
 
 .item-card {
-  width: 80%;
-  position: relative;
+    width: 80%;
+    position: relative;
 }
 
 .item-card__image {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background: #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 18px;
-  color: #555;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #555;
 }
 
 .item-card__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .item-card__sold{
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #e60023;
-  color: #fff;
-  font-weight: bold;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #e60023;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
 .item-card__name {
-  margin-top: 10px;
+    margin-top: 10px;
 }
