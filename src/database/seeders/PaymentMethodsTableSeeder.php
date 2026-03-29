@@ -16,7 +16,7 @@ class PaymentMethodsTableSeeder extends Seeder
     {
         DB::table('payment_methods')->insert([
             'id' => 1,
-            'payment_method' => 'コンビニ払い',
+            'payment_method' => 'コンビニ支払い',
         ]);
 
         DB::table('payment_methods')->insert([

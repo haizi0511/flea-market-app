@@ -8,7 +8,6 @@ use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\CommentController;
 
 Route::get('/register', [UserController::class,'register']);
-Route::get('/login', [UserController::class,'login']);
 Route::get('/', [ItemController::class, 'index']);
 Route::get('/mylist', [MylistController::class, 'mylist']);
 Route::middleware('auth')->group(function () {

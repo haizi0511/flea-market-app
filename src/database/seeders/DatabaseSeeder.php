@@ -16,7 +16,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CategoriesTableSeeder::class,
             PaymentMethodsTableSeeder::class,
+            UsersTableSeeder::class,
+            ItemsTableSeeder::class,
+            ProfilesTableSeeder::class,
             ]);
-        // \App\Models\User::factory(10)->create();
     }
 }

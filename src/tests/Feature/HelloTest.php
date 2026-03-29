@@ -106,7 +106,7 @@ class HelloTest extends TestCase
         $response = $this->get('/login');
 
         $response->assertStatus(200);
-        $response->assertViewIs('login');
+        $response->assertViewIs('auth.login');
     }
 
     public function test_login_email_is_required()
@@ -972,7 +972,7 @@ public function test_comment_max_length()
 
         $responseSell->assertStatus(200);
         $responseSell->assertSee('テストユーザー');
-        $responseSell->assertSee('images/default.png');
+        $responseSell->assertSee('storage/test.jpg');
         $responseSell->assertSee('出品商品A');
 
         $responseBuy = $this->get('/mypage?tab=buy');
@@ -1009,6 +1009,6 @@ public function test_comment_max_length()
 
         $response->assertSee('テストビル101');
 
-        $response->assertSee('images/default.png');
+        $response->assertSee('storage/test.jpg');
     }
 }

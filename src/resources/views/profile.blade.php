@@ -25,7 +25,9 @@
 
     <div class="profile-form__image-area">
       <div class="profile-form__image">
-        <img src="{{ $user->profile_image ?? asset('images/default.png') }}" id="preview" >
+        <img src="{{ $user->profile && $user->profile->profile_image
+          ? asset('storage/' . $user->profile->profile_image)
+          : asset('images/default.png') }}" id="preview">
       </div>
       <div class="profile-form__image-button">
         <label for="image-upload" class="image-upload-label">

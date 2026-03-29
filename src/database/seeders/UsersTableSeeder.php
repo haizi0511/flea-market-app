@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class UsersTableSeeder extends Seeder
 {
@@ -16,8 +18,8 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'テスト',
             'email' => 'test@example.co.jp',
-            'password' => '00000000',
-            'profile_completed' => 0,
+            'password' => Hash::make('00000000'),
+            'profile_completed' => 1,
         ]);
     }
 }

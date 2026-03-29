@@ -13,7 +13,9 @@
 <div class="profile">
 
   <div class="profile__image">
-    <img src="{{ asset('images/default.png') }}" >
+    <img src="{{ $user->profile && $user->profile->profile_image
+        ? asset('storage/' . $user->profile->profile_image)
+        : asset('images/default.png') }}">
   </div>
 
   <div class="profile__name">
@@ -44,8 +46,7 @@
     {{-- カード1 --}}
         <a href="/item/{{ $item->id }}" class="item-card">
           <div class="item-card__image">
-            <img src="{{ $item->item_image }}" alt="商品画像">
-
+            <img src="{{ asset('storage/' . $item->item_image) }}" alt="商品画像">
           </div>
 
           <div class="item-card__name">

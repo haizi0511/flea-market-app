@@ -16,10 +16,10 @@ class ProfilesTableSeeder extends Seeder
     {
         $param = [
         'id' => '1',
-        'user_id' =>'3',
-        'postal_code' => 252-0144,
-        'address' => '神奈川県相模原市東橋本2-12-15',
-        'building' =>'レヴァンテ102',
+        'user_id' =>'1',
+        'postal_code' => '000-0000',
+        'address' => 'テスト1-1-1',
+        'building' =>'テスト111',
         'profile_image' => 'test',
         ];
         DB::table('profiles')->insert($param);
