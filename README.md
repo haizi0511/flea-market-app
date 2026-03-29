@@ -1,4 +1,3 @@
-# Webサービス制作の概要・方針決定
 ## サービス名
 coachtechフリマ
 
@@ -10,7 +9,6 @@ coachtechフリマ
 ・ユーザーは会員登録後、出品・購入・コメント・お気に入り登録が可能<br>  
 ・Laravelを用いたWebアプリケーション開発の学習を目的として作成<br>
 
-# 環境構築手順
 ## 環境構築
 Dockerビルド<br>
 ・git clone git@github.com:haizi0511/flea-market-app.git<br>
@@ -30,14 +28,12 @@ Dockerビルド<br>
 ・会員登録画面：http://localhost/register<br>
 ・ログイン画面：http://localhost/login<br>
 
-# 使用技術
 ## 使用技術(実行環境)
 ・PHP:8.1.34<br>
 ・Laravel 8.83.29<br>
 ・MySQL 8.0.26<br>
 ・nginx 1.21.1<br>
 
-# 一般ユーザーのログイン情報
 ## 未認証ユーザーのログイン情報
 ・商品一覧画面（トップ画面）：http://localhost/<br>
 ・会員登録画面：http://localhost/register<br>
